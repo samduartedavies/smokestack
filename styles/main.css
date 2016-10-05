@@ -110,6 +110,9 @@ p {
 	padding-bottom:10px;
 	margin-top:20px;
 }
+#portfolio-footer{
+	padding-bottom:15vh;
+}
 @media(min-width:768px) {
     p {
         margin: 0 0 35px;
