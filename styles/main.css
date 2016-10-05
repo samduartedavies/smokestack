@@ -197,7 +197,7 @@ border: 0;
 }
 .navbar-inverse {
     color: white;
-    background-color: rgba(26, 26, 26, 0.95); /* #262626; */
+    background-color: rgba(26, 26, 26, 0.9); /* #262626; */
 border: 0;	
 	
 }
@@ -208,7 +208,7 @@ border: 0;
 }
 .pageHeader {
     color: white;
-    background-color: rgba(26, 26, 26, 0.95); /* #1a1a1a; */
+    background-color: rgba(26, 26, 26, 0.9); /* #1a1a1a; */
 	text-align:center;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
