@@ -1,0 +1,20 @@
+<!--<div class="video-caption">
+<h2><small>Welcome to Charlie</small></h2>
+<p>this is some dummy text to test if it works</p>-->
+<video autoplay muted poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="assets/sample.mkv" type="video/mp4">
+</video>
+<button onclick="enableMute()" class="btn btn-lg" id="muteButton"><img class="img-responsive" id="muteImage" src="../images/headphone-symbol.png"/><i class="fa fa-headphones fa-2x" aria-hidden="true"></i></button>
+
+<script>
+var vid = document.getElementById("bgvid");
+
+function enableMute() { 
+	if(vid.muted==true){
+		vid.muted = false;
+	}else if(vid.muted==false){
+		vid.muted = true;
+	}
+}
+</script>

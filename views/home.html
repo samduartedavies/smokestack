@@ -1,0 +1,51 @@
+<!--<div class="video-caption">
+<h2><small>Welcome to Charlie</small></h2>
+<p>this is some dummy text to test if it works</p>-->
+<div class="page">
+
+<video autoplay muted poster="images/carousel1.jpg" id="bgvid" loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="assets/Serenity.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+
+</video>
+<canvas class="canvas"></canvas>        
+
+<button onclick="enableMute();" ng-click="muteImage();" class="btn" id="muteButton"><img class="img-responsive" id="muteImage" ng-src="{{muteImgSrc}}"/></button>
+<script src="scripts/canvas-video-player.js"></script>
+
+<script>
+var vid = document.getElementById("bgvid");
+function enableMute() { 
+	if(vid.muted==true){
+		vid.muted = false;
+	}else if(vid.muted==false){
+		vid.muted = true;
+	}
+}
+</script>
+
+<script>
+
+var isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+
+if (isIOS) {
+
+    var canvasVideo = new CanvasVideoPlayer({
+        videoSelector: 'video',
+        canvasSelector: '.canvas',
+        timelineSelector: false,
+        autoplay: true,
+        makeLoop: true,
+        pauseOnClick: false,
+        audio: false
+    });
+
+}else {
+
+    // Use HTML5 video
+    document.querySelectorAll('.canvas')[0].style.display = 'none';
+
+} 
+
+</script>
